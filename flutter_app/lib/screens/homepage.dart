@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:gap/gap.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -8,18 +8,32 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Column(
-          children: [
-            IconButton(
-              onPressed: () {
-                Get.offNamed('/login');
-              },
-              icon: Icon(Icons.arrow_back),
-            ),
-            Container(
-              child: Text('data'),
-            ),
-          ],
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+          child: Column(
+            children: [
+              Gap(20),
+              Row(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Hey, Mawira',
+                        style: TextStyle(fontSize: 22),
+                      ),
+                      Gap(5),
+                      Text(
+                        'Keep up the good work',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                    ],
+                  ),
+                  
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
