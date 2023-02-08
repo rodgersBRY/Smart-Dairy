@@ -37,15 +37,17 @@ class _LoginScreenState extends State<LoginScreen> {
           body: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              // mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  width: double.maxFinite / 2,
-                  height: 200,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('assets/icon.png'),
+                Expanded(
+                  child: Container(
+                    width: double.maxFinite / 2,
+                    height: 200,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage('assets/icon.png'),
+                      ),
                     ),
                   ),
                 ),

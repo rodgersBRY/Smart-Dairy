@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:smart_dairy/screens/auth/register_screen.dart';
+import 'package:smart_dairy/screens/cows.dart';
 import 'package:smart_dairy/screens/homepage.dart';
 
 import './screens/auth/login_screen.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/login',
+      initialRoute: '/',
       getPages: appRoutes(),
     );
   }
@@ -40,6 +41,11 @@ class MyApp extends StatelessWidget {
         page: () => HomePage(),
         transition: Transition.downToUp,
       ),
+      GetPage(
+        name: '/cows',
+        page: () => CowsPage(),
+        transition: Transition.rightToLeftWithFade,
+      )
     ];
   }
 }
