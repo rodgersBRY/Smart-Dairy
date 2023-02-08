@@ -40,7 +40,8 @@ class _LoginScreenState extends State<LoginScreen> {
               // mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Expanded(
+                Gap(60),
+                Flexible(
                   child: Container(
                     width: double.maxFinite / 2,
                     height: 200,
@@ -66,21 +67,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   focusNode: passwordFocus,
                   obscureText: true,
                 ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: GestureDetector(
-                    onTap: () {
-                      Get.offNamed('/register');
-                    },
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(vertical: 20),
-                      child: Text(
-                        'Don\'t have an account? Sign Up',
-                        style: TextStyle(color: AppColors.primaryBlackColor),
-                      ),
-                    ),
-                  ),
-                ),
                 Gap(40),
                 GestureDetector(
                   onTap: login,
@@ -94,11 +80,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Center(
                       child: Text(
                         'Login',
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                        style: TextStyle(color: Colors.white, fontSize: 22),
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),

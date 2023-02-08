@@ -113,7 +113,7 @@ class HomePage extends StatelessWidget {
                 "Quick Actions",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 17,
+                  fontSize: 20,
                 ),
               ),
               Gap(10),
